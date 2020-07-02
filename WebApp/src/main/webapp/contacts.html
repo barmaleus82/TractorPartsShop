@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Контакты</title>
+    <link href="css/default.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+<div>
+    <div id="header">
+        <div id="logo">
+            <h1>ООО "Фирма Альтарис"</h1>
+            <h2>Запчасти к отечественным тракторам и сельхозтехнике</h2>
+            <h3 id="userName"></h3>
+        </div>
+    </div>
+    <div id="menu">
+        <ul>
+            <li class="active"><a style="greenbutton" href="index.html">Главная</a></li>
+            <li class="active"><a style="greenbutton" href="goods.html">Каталог</a></li>
+            <li class="active"><a style="greenbutton" href="contacts.html">Контакты</a></li>
+        </ul>
+        <div class="userpass">
+            <input type="text" value="Логин" onBlur="if(this.value == '') this.value = 'Логин'"
+                   onFocus="if(this.value == 'Логин') this.value = ''" required>
+            <input type="password" value="Пароль" onBlur="if(this.value == '') this.value = 'Пароль'"
+                   onFocus="if(this.value == 'Пароль') this.value = ''" required>
+            <button type="button" id="login_button" class="greenbutton" onClick="user.login()">Войти</button>
+            <!--type="button" -->
+            <button type="button" id="reg_button" class="greenbutton" onClick='location.href="registration.html"'>
+                Регистрация
+            </button> <!--type="submit"-->
+        </div>
+    </div>
+    <div id="splash"><img src="images/image.jpg" width="940" height="225"/></div>
+    <div id="page">
+        <div id="page-bgtop">
+            <div id="content">
+                <div class="post">
+                    <h2 class="title">Контакты</h2>
+                    <div> <!-- class="entry"> -->
+                        <br>ООО "Фирма Альтарис"
+                        <br><br>+38(050) 346-42-51 Валентина
+                        <br>+38(067) 574-13-54
+                        <br>+38(050) 364-42-96 Светлана
+                        <br>+38(067) 574-36-67
+                        <br>+38(057) 372-28-49 тел-факс
+                        <br><br>mail: 3642175@ukr.net
+                        <br><br>Адрес: 61098, Украина, Харьковская обл, Харьков, пер.Динамовский, 4
+
+                        <br><br>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1282.9754059372342!2d36.15596465835628!3d49.97478099485312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDU4JzI5LjIiTiAzNsKwMDknMjUuNCJF!5e0!3m2!1sru!2sua!4v1509755571258"
+                                width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <!-- end div#content -->
+            <div id="sidebar">
+                <ul>
+                    <li>
+                        <h2></h2>
+                        <ul>
+                            <li><a style="" href="index.html">Главная</a></li>
+                            <li><a style="" href="goods.html">Каталог</a></li>
+                            <li class="active"><a style="" href="contacts.html">Контакты</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+            <div style="clear: both; height: 1px"></div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-1.11.1.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <script src="js/goods.js"></script>
+    <script src="js/user.js"></script>
+    <script>user.currentUserName()</script>
+
+</div>
+</body>
+</html>

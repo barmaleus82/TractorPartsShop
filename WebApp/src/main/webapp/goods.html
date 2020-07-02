@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script>document.createElement('t')</script>
+<style>t {
+    padding: 0 0.8em;
+}</style>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Каталог</title>
+    <link href="css/default.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+<div>
+    <div id="header">
+        <div id="logo">
+            <h1>ООО "Фирма Альтарис"</h1>
+            <h2>Запчасти к отечественным тракторам и сельхозтехнике</h2>
+            <h3 id="userName"></h3>
+        </div>
+    </div>
+    <div id="menu">
+        <ul>
+            <li class="active"><a style="greenbutton" href="index.html">Главная</a></li>
+            <li class="active"><a style="greenbutton" href="goods.html">Каталог</a></li>
+            <li class="active"><a style="greenbutton" href="contacts.html">Контакты</a></li>
+        </ul>
+        <div class="userpass">
+            <input id="login" type="text" value="Логин" onBlur="if(this.value == '') this.value = 'Логин'"
+                   onFocus="if(this.value == 'Логин') this.value = ''" required>
+            <input id="password" type="password" value="Пароль" onBlur="if(this.value == '') this.value = 'Пароль'"
+                   onFocus="if(this.value == 'Пароль') this.value = ''" required>
+            <button type="button" id="login_button" class="greenbutton" onClick="user.login()">Войти</button>
+            <!--type="button" -->
+            <button type="button" id="reg_button" class="greenbutton" onClick='location.href="registration.html"'>
+                Регистрация
+            </button> <!--type="submit"-->
+        </div>
+    </div>
+    <div id="splash"><img src="images/image.jpg" width="940" height="225"/></div>
+    <div id="page">
+        <div id="page-bgtop">
+            <div id="content">
+                <div class="post">
+                    <h2 class="title">Каталог</h2>
+                    <div class="entry">
+                        <p>Поиск в каталоге: <input id="search_str" type="text" required>
+                            <button type="button" id="search_button" class="greenbutton" onClick="goods.findGoods()">
+                                Поиск
+                            </button>
+                            <button type="button" id="fill_button" class="greenbutton" onClick="goods.fillDB()">
+                                Загр.товар
+                            </button>
+                        </p>
+                        <div id="goods_html"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="sidebar">
+                <ul>
+                    <li>
+                        <ul>
+                            <li><a style="" href="index.html">Главная</a></li>
+                            <li class="active"><a style="" href="goods.html">Каталог</a></li>
+                            <div style="" id="group_html"></div>
+                            <li><a style="" href="contacts.html">Контакты</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div style="clear: both; height: 1px"></div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-1.11.1.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <script src="js/goods.js"></script>
+    <script src="js/user.js"></script>
+    <script>user.currentUserName()</script>
+    <script>goods.groupList()</script>
+
+</div>
+</body>
+</html>
